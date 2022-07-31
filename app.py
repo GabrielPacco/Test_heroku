@@ -8,9 +8,7 @@ from backend.blueprints.task_blueprint import task_blueprint
 
 #app = Flask(__name__)
 # para que utilice vue compilado ( npm run build ). En la carpeta dist, esta lo compilado de vue
-app = Flask(__name__,
-            static_folder = "./frontend/dist/static",
-            template_folder = "./frontend/dist")
+app = Flask(__name__, template_folder= './templates')
 
 app.register_blueprint(task_blueprint)
 
